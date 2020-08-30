@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/estadoFragment">
+    <fragment
+        android:id="@+id/estadoFragment"
+        android:name="com.example.estados.EstadosFragment"
+        android:label="fragment_estados"
+        tools:layout="@layout/fragment_estados" >
+        <action
+            android:id="@+id/estadosToDetalhe"
+            app:destination="@id/detalheFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalheFragment"
+        android:name="com.example.estados.DetalheFragment"
+        android:label="fragment_detalhe"
+        tools:layout="@layout/fragment_detalhe" >
+        <action
+            android:id="@+id/detalheToEstados"
+            app:destination="@id/estadoFragment" />
+        <argument android:name="estado"
+            app:argType="com.example.estados.model.Estado" />
+    </fragment>
+</navigation>
