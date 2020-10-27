@@ -13,7 +13,7 @@ import com.example.estados.model.Estado
 import kotlinx.android.synthetic.main.fragment_detalhe.*
 import kotlinx.android.synthetic.main.fragment_detalhe.view.*
 
-class DetalheFragment : Fragment() {
+class DetalheFragment : Fragment(){
 
     private lateinit var adapter: DetalheAdapter
 
